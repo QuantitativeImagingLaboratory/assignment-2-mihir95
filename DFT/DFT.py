@@ -13,7 +13,7 @@ class DFT:
         matrix: a 2d matrix
         returns a complex matrix representing fourier transform"""
         F = np.empty((len(matrix),len(matrix)), dtype=complex)
-
+        
         for i in range(0,len(matrix-1)):
             u = 0
             u = u+1
@@ -25,6 +25,8 @@ class DFT:
                 F[u][v] = sums
                 print(F[u][v], end=' ')
             print()
+        return F[u][v]
+           
 
 
     def inverse_transform(self, matrix):
@@ -47,6 +49,7 @@ class DFT:
                 Inv[i][j] = sums
                 print(Inv[i][j], end=' ')
             print()
+        return Inv[i][j]
 
 
 
@@ -69,6 +72,7 @@ class DFT:
 
                 print(F[u][v], end=' ')
             print()
+        return F[u][v]  
 
 
 
@@ -92,3 +96,4 @@ class DFT:
                 F[u][v] = sums
                 print(abs(F[u][v]), end=' ')
                 print()
+        return F[u][v]        
