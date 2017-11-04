@@ -12,7 +12,7 @@ class DFT:
         takes as input:
         matrix: a 2d matrix
         returns a complex matrix representing fourier transform"""
-         F = np.empty((len(matrix),len(matrix)), dtype=complex)
+        F = np.empty((len(matrix),len(matrix)), dtype=complex)
 
         for i in range(0,len(matrix-1)):
             u = 0
@@ -33,7 +33,7 @@ class DFT:
         takes as input:
         returns a complex matrix representing the inverse fourier transform"""
         
-         I = np.empty((len(matrix), len(matrix)), dtype=complex)
+        I = np.empty((len(matrix), len(matrix)), dtype=complex)
 
         for u in range(0, len(matrix - 1)):
             i = 0
