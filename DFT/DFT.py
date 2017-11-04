@@ -33,7 +33,7 @@ class DFT:
         takes as input:
         returns a complex matrix representing the inverse fourier transform"""
         
-        I = np.empty((len(matrix), len(matrix)), dtype=complex)
+        Inv = np.empty((len(matrix), len(matrix)), dtype=complex)
 
         for u in range(0, len(matrix - 1)):
             i = 0
@@ -44,8 +44,8 @@ class DFT:
                 angle = 2 * cmath.pi * (float(i * u) + float(j * v)) * 1 / len(matrix)
                 sums = sums + (matrix[i][j] * (cmath.cos(angle) + 1j * cmath.sin(angle)))
 
-                I[i][j] = sums
-                print(I[i][j], end=' ')
+                Inv[i][j] = sums
+                print(Inv[i][j], end=' ')
             print()
 
 
